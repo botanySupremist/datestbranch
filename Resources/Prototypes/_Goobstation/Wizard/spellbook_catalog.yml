@@ -161,6 +161,24 @@
     - SpellbookSemiRandom
 
 - type: listing
+  id: SpellbookVenomate
+  productUpgradeId: SpellbookVenomateUpgrade
+  name: spellbook-venomate-name
+  description: spellbook-venomate-desc
+  productAction: ActionVenomate
+  cost:
+    WizCoin: 1
+  categories:
+  - SpellbookOffensive
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyBeforeCondition
+    blacklist:
+    - SpellbookFullRandom
+    - SpellbookSemiRandom
+
+- type: listing
   id: SpellbookSpellCards
   productUpgradeId: SpellbookSpellCardsUpgrade
   name: spellbook-spell-cards-name

@@ -85,6 +85,11 @@ spellbook-homing-toolbox-desc =
     Learning this spell allows you to get a tider wizard bundle for free!
     Doesn't require wizard's robe and hat to cast.
 
+spellbook-venomate-name = Venomate
+spellbook-venomate-desc =
+    A spell that introduces toxins to a target's bloodstream. Upgrading increases the variety and lethality of toxins.
+    Doesn't require wizard's robe and hat to cast.
+
 spellbook-spell-cards-name = Spell Cards
 spellbook-spell-cards-desc =
     Blazing hot rapid-fire homing cards. Send your foes to the shadow realm with their mystical power!

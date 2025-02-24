@@ -146,6 +146,7 @@ public abstract class SharedSpellsSystem : EntitySystem
         SubscribeLocalEvent<TeslaBlastEvent>(OnTeslaBlast);
         SubscribeLocalEvent<LightningBoltEvent>(OnLightningBolt);
         SubscribeLocalEvent<HomingToolboxEvent>(OnHomingToolbox);
+        SubscribeLocalEvent<VenomateEvent>(OnVenomate);
         SubscribeLocalEvent<SpellCardsEvent>(OnSpellCards);
         SubscribeLocalEvent<ArcaneBarrageEvent>(OnArcaneBarrage);
         SubscribeLocalEvent<LesserSummonGunsEvent>(OnLesserSummonGuns);
@@ -596,6 +597,24 @@ public abstract class SharedSpellsSystem : EntitySystem
                 true,
                 ev.Coords == null ? null : TransformSystem.ToMapCoordinates(ev.Coords.Value));
         }
+
+        _magic.Speak(ev);
+        ev.Handled = true;
+    }
+
+    private void OnVenomate(VenomateEvent ev)
+    {
+        if (ev.Handled || !_magic.PassesSpellPrerequisites(ev.Action, ev.Performer))
+            return;
+
+        if (HasComp<BorgChassisComponent>(ev.Target) || HasComp<SiliconComponent>(ev.Target))
+        {
+            Popup(ev.Performer, "spell-fail-target-silicon");
+            return;
+        }
+
+        if (!Venomate(ev))
+            return;
 
         _magic.Speak(ev);
         ev.Handled = true;
@@ -1435,6 +1454,11 @@ public abstract class SharedSpellsSystem : EntitySystem
     protected virtual void Speak(EntityUid uid, string message) { }
 
     protected virtual bool ScreamForMe(ScreamForMeEvent ev)
+    {
+        return true;
+    }
+
+    protected virtual bool Venomate(VenomateEvent ev)
     {
         return true;
     }

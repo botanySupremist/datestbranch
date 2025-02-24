@@ -339,6 +339,23 @@
   - type: ActionUseDelayModifier
     useDelay: 3
 
+# Venomate
+- type: entity
+  parent: ActionVenomate
+  id: ActionVenomateII
+  name: Venomate II
+  components:
+  - type: ActionUseDelayModifier
+    useDelay: 35
+
+- type: entity
+  parent: ActionVenomate
+  id: ActionVenomateIII
+  name: Venomate III
+  components:
+  - type: ActionUseDelayModifier
+    useDelay: 20
+
 # Arcane Barrage
 - type: entity
   parent: ActionArcaneBarrage

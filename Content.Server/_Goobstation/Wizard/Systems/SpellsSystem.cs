@@ -7,6 +7,7 @@ using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
+using Content.Shared.Chemistry.EntitySystems;
 using Content.Server.Emp;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Fluids.EntitySystems;
@@ -79,6 +80,7 @@ public sealed class SpellsSystem : SharedSpellsSystem
     [Dependency] private readonly BatterySystem _battery = default!;
     [Dependency] private readonly TeleportSystem _teleport = default!;
     [Dependency] private readonly NpcFactionSystem _faction = default!;
+    [Dependency] private readonly SharedSolutionContainerSystem _solution = default!;
 
     public override void Initialize()
     {
@@ -448,6 +450,18 @@ public sealed class SpellsSystem : SharedSpellsSystem
         _bloodstream.SpillAllSolutions(ev.Target, bloodstream);
         _bloodstream.TryModifyBleedAmount(ev.Target, bloodstream.MaxBleedAmount, bloodstream);
         EnsureComp<BloodlossDamageMultiplierComponent>(ev.Target);
+
+        return true;
+    }
+
+    protected override bool Venomate(VenomateEvent ev)
+    {
+        if (!TryComp(ev.Target, out BloodstreamComponent? bloodstream))
+            return false;
+
+        Spawn(ev.Effect, TransformSystem.GetMapCoordinates(ev.Target));
+
+        _bloodstream.SpillAllSolutions(ev.Target, bloodstream);
 
         return true;
     }

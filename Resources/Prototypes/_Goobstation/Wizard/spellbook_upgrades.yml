@@ -152,6 +152,26 @@
     stock: 4
 
 - type: listing
+  id: SpellbookVenomateUpgrade
+  productUpgradeId: SpellbookVenomateUpgrade
+  name: spellbook-upgrade-venomate-name
+  description: spellbook-upgrade-venomate-desc
+  icon:
+    sprite: _Goobstation/Wizard/actions.rsi
+    state: toolbox
+  cost:
+    WizCoin: 1
+  categories:
+  - SpellbookOffensive
+  conditions:
+  - !type:BuyBeforeCondition
+    whitelist:
+    - SpellbookVenomate
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+
+- type: listing
   id: SpellbookArcaneBarrageUpgrade
   productUpgradeId: SpellbookArcaneBarrageUpgrade
   name: spellbook-upgrade-arcane-barrage-name

@@ -37,6 +37,9 @@ spellbook-upgrade-lightning-bolt-desc = Upgrades Lightning Bolt to a maximum of 
 spellbook-upgrade-homing-toolbox-name = Homing Toolbox Upgrade
 spellbook-upgrade-homing-toolbox-desc = Upgrades Homing Toolbox to a maximum of level 5!
 
+spellbook-upgrade-venomate-name = Venomate Upgrade
+spellbook-upgrade-venomate-desc = Upgrades Venomate to a maximum of level 3!
+
 spellbook-upgrade-arcane-barrage-name = Arcane Barrage Upgrade
 spellbook-upgrade-arcane-barrage-desc = Upgrades Arcane Barrage to a maximum of level 3!
 

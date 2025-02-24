@@ -304,6 +304,16 @@ public sealed partial class HomingToolboxEvent : EntityWorldTargetActionEvent, I
     public float ProjectileSpeed = 20f;
 }
 
+public sealed partial class VenomateEvent : EntityTargetActionEvent, ISpeakSpell
+{
+    [DataField]
+    public string? Speech { get; private set; }
+
+    [DataField]
+    public EntProtoId Effect = "DamageTrapFlashEffect";
+}
+
+
 public sealed partial class SpellCardsEvent : EntityWorldTargetActionEvent, ISpeakSpell
 {
     [DataField]

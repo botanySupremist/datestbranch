@@ -450,6 +450,39 @@
       5: ActionHomingToolboxV
 
 - type: entity
+  id: ActionVenomate
+  name: Venomate
+  description: Introduce toxins to a target's bloodstream.
+  components:
+  - type: Sprite # For apprentices
+    sprite: _Goobstation/Wizard/actions.rsi
+    state: scream_for_me
+  - type: EntityTargetAction
+    raiseOnUser: true
+    useDelay: 45
+    itemIconStyle: BigAction
+    whitelist:
+      components:
+      - MobState
+    canTargetSelf: false
+    interactOnMiss: false
+    sound: !type:SoundPathSpecifier
+      path: /Audio/_Goobstation/Wizard/exit_blood.ogg
+    icon:
+      sprite: _Goobstation/Wizard/actions.rsi
+      state: scream_for_me
+    event: !type:VenomateEvent
+      speech: action-speech-spell-venomate
+  - type: Magic
+    requiresSpeech: true
+    requiresClothes: true
+    school: Conjuration
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionVenomateII
+      3: ActionVenomateIII
+
+- type: entity
   id: ActionSpellCards
   name: Spell Cards
   description: Fire up to five bursts of homing spell cards.
