@@ -354,7 +354,7 @@
   name: Venomate III
   components:
   - type: ActionUseDelayModifier
-    useDelay: 20
+    useDelay: 25
 
 # Arcane Barrage
 - type: entity

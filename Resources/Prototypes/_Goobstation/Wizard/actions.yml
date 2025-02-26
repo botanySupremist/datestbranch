@@ -452,11 +452,8 @@
 - type: entity
   id: ActionVenomate
   name: Venomate
-  description: Introduce toxins to a target's bloodstream.
+  description: Introduce a cocktail of toxins to a target's bloodstream.
   components:
-  - type: Sprite # For apprentices
-    sprite: _Goobstation/Wizard/actions.rsi
-    state: scream_for_me
   - type: EntityTargetAction
     raiseOnUser: true
     useDelay: 45
@@ -476,7 +473,7 @@
   - type: Magic
     requiresSpeech: true
     requiresClothes: true
-    school: Conjuration
+    school: Transmutation
   - type: ActionUpgrade
     effectedLevels:
       2: ActionVenomateII

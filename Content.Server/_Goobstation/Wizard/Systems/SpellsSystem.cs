@@ -454,14 +454,17 @@ public sealed class SpellsSystem : SharedSpellsSystem
         return true;
     }
 
-    protected override bool Venomate(VenomateEvent ev)
+    private bool Venomate(VenomateEvent ev, Dictionary<string, FixedPoint2> reagents)
     {
         if (!TryComp(ev.Target, out BloodstreamComponent? bloodstream))
             return false;
 
         Spawn(ev.Effect, TransformSystem.GetMapCoordinates(ev.Target));
 
-        _bloodstream.SpillAllSolutions(ev.Target, bloodstream);
+        var solution = new Solution();
+        foreach (var reagent in reagents)
+            solution.AddReagent(reagent.Key, reagent.Value);
+
 
         return true;
     }
