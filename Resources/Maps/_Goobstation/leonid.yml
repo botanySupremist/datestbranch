@@ -12377,7 +12377,8 @@ entities:
           0,18:
             0: 3822
           1,17:
-            0: 55483
+            0: 55451
+            4: 32
           1,18:
             0: 3551
           1,19:
@@ -17181,7 +17182,7 @@ entities:
       pos: -84.5,-3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -187601.52
+      secondsUntilStateChange: -187715.34
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18383,7 +18384,7 @@ entities:
       pos: -53.5,-62.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -31284.2
+      secondsUntilStateChange: -31398.031
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -86220,74 +86221,18 @@ entities:
     - type: Transform
       pos: 16.429585,28.65991
       parent: 2
-- proto: CandyBowl
+- proto: CandyBowlFilledLollypopsMystery
   entities:
   - uid: 13724
     components:
     - type: Transform
-      pos: -46.49774,-11.406411
+      pos: -46.500546,-11.438968
       parent: 2
-    - type: Bin
-      items:
-      - 13725
-      - 13726
-      - 13727
-      - 13728
-      - 13729
-      - 13730
-      - 13731
-      - 13732
-      - 13733
-      - 13734
-      - 13735
-      - 13736
-      - 13737
-      - 13738
-      - 13739
-      - 13740
-      - 13741
-      - 13742
-      - 13743
-      - 13744
-      - 13745
-      - 13746
-      - 13747
-      - 13748
-      - 13749
-    - type: ContainerContainer
-      containers:
-        bin-container: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 13725
-          - 13726
-          - 13727
-          - 13728
-          - 13729
-          - 13730
-          - 13731
-          - 13732
-          - 13733
-          - 13734
-          - 13735
-          - 13736
-          - 13737
-          - 13738
-          - 13739
-          - 13740
-          - 13741
-          - 13742
-          - 13743
-          - 13744
-          - 13745
-          - 13746
-          - 13747
-          - 13748
-          - 13749
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
+  - uid: 13725
+    components:
+    - type: Transform
+      pos: -31.510912,14.682382
+      parent: 2
 - proto: Cane
   entities:
   - uid: 13750
@@ -100181,8 +100126,8 @@ entities:
         immutable: False
         temperature: 293.14673
         moles:
-        - 1.7459903
-        - 6.568249
+        - 1.8856695
+        - 7.0937095
         - 0
         - 0
         - 0
@@ -100203,13 +100148,13 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 16259
-          - 16263
-          - 16258
-          - 16260
-          - 16257
-          - 16262
           - 16261
+          - 16262
+          - 16257
+          - 16260
+          - 16258
+          - 16263
+          - 16259
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -104572,7 +104517,7 @@ entities:
       pos: 11.5,31.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -192280.61
+      secondsUntilStateChange: -192394.44
       state: Opening
   - uid: 16848
     components:
@@ -104580,7 +104525,7 @@ entities:
       pos: 11.5,32.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -192280.14
+      secondsUntilStateChange: -192393.97
       state: Opening
   - uid: 16849
     components:
@@ -104588,7 +104533,7 @@ entities:
       pos: 11.5,33.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -192279.77
+      secondsUntilStateChange: -192393.6
       state: Opening
   - uid: 16850
     components:
@@ -104596,7 +104541,7 @@ entities:
       pos: 11.5,34.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -192279.38
+      secondsUntilStateChange: -192393.2
       state: Opening
   - uid: 16851
     components:
@@ -104623,7 +104568,7 @@ entities:
       pos: -91.5,-24.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -232975.1
+      secondsUntilStateChange: -233088.92
       state: Closing
 - proto: CurtainsGreenOpen
   entities:
@@ -104712,7 +104657,7 @@ entities:
       pos: 16.5,32.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -173393.53
+      secondsUntilStateChange: -173507.36
       state: Opening
 - proto: CurtainsWhiteOpen
   entities:
@@ -112832,8 +112777,11 @@ entities:
   - uid: 18203
     components:
     - type: Transform
-      pos: -31.73995,14.728284
+      pos: -31.729662,15.196752
       parent: 2
+    - type: Physics
+      angularDamping: 0
+      linearDamping: 0
   - uid: 18204
     components:
     - type: Transform
@@ -160902,9 +160850,11 @@ entities:
   - uid: 24610
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -31.435413,14.459184
+      pos: -31.39633,15.661549
       parent: 2
+    - type: Physics
+      angularDamping: 0
+      linearDamping: 0
   - uid: 24611
     components:
     - type: Transform
@@ -160986,8 +160936,11 @@ entities:
   - uid: 24622
     components:
     - type: Transform
-      pos: -13.489295,14.730354
+      pos: -13.479013,14.776412
       parent: 2
+    - type: Physics
+      angularDamping: 0
+      linearDamping: 0
   - uid: 24623
     components:
     - type: Transform
@@ -161076,206 +161029,6 @@ entities:
       parent: 2
 - proto: PillTricordrazine
   entities:
-  - uid: 13725
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13726
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13727
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13728
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13729
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13730
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13731
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13732
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13733
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13734
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13735
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13736
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13737
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13738
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13739
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13740
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13741
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13742
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13743
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13744
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13745
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13746
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13747
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13748
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-  - uid: 13749
-    components:
-    - type: Transform
-      parent: 13724
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
   - uid: 24636
     components:
     - type: Transform
@@ -220961,7 +220714,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -171725.53
+      secondsUntilStateChange: -171839.36
       state: Opening
     - type: Airlock
       autoClose: False
@@ -221265,7 +221018,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -203973.7
+      secondsUntilStateChange: -204087.53
       state: Opening
     - type: Airlock
       autoClose: False
@@ -222647,7 +222400,7 @@ entities:
       pos: -105.5,-19.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -183951.31
+      secondsUntilStateChange: -184065.14
       state: Opening
   - uid: 35258
     components:
@@ -222667,7 +222420,7 @@ entities:
       pos: 16.5,30.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -173389.12
+      secondsUntilStateChange: -173502.95
       state: Opening
   - uid: 35261
     components:
